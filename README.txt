@@ -1,0 +1,1 @@
+This folder contains all test files for the cricket-frontend project
