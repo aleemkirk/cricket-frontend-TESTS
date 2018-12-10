@@ -1,0 +1,36 @@
+<div class="center">
+    <div class="">
+        <input [(ngModel)]="searchBar" type="text" placeholder="Search player Name" (keyup)='searchPlayer()'>
+    </div>
+    <ul>
+        <p *ngFor="let playerName of this.playerNames" (click)="onClick(playerName)">{{playerName.Name}}</p>
+    </ul>
+</div>
+
+
+<div *ngIf="this.matchStats" class="match-stats container">
+    <table class="center">
+        <tr>
+            <th>Venue</th>
+            <th>Date</th>
+            <th>Fours</th>
+            <th>Sixes</th>
+            <th>Total Runs</th>
+            <th>Bowled</th>
+            <th>Run Out</th>
+            <th>Caught</th>
+            <th>Wides</th>
+        </tr>
+        <tr *ngFor="let match of this.matchStats">
+            <td>{{match.venue}}</td>
+            <td>{{match.date}}</td>
+            <td>{{match.fours}}</td>
+            <td>{{match.sixes}}</td>
+            <td>{{match.total_runs}}</td>
+            <td>{{match.bowled}}</td>
+            <td>{{match.run_out}}</td>
+            <td>{{match.caught}}</td>
+            <td>{{match.wides}}</td>
+        </tr>
+    </table>
+</div>

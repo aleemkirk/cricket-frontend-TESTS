@@ -1,0 +1,14 @@
+.topnav{
+    text-align: center;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    text-align: center;
+    width: 100%;
+    
+  }

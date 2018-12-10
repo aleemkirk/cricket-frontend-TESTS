@@ -1,0 +1,7 @@
+<nav>
+    <a id="search" routerLink="/" routerLinkActive="active">Search player </a>
+    <a id="playerInfo" routerLink="/player-info" routerLinkActive="active"> Player Info</a>
+  </nav>
+<div [@routerAnimations]='prepareRoute(outlet)'>
+  <router-outlet #outlet='outlet'></router-outlet>
+</div>

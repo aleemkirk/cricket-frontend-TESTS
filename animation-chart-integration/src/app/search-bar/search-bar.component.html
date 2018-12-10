@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 text-center">
+        <div class="topnav">
+            <input [(ngModel)] = 'this.playerName' type="text" placeholder="Search Player..." (keyup)="searchPlayer()">
+          </div>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+
+
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4 text-center" [@listAnimation]="numNames">
+      <div *ngFor="let name of this.names" class="card text-center">
+          <div class="card-body">
+              <p routerLink='player-chart/{{name.Name.replace(" ", "_")}}' routerLinkActive='active'>{{name.Name}}</p>
+          </div>
+        </div>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
